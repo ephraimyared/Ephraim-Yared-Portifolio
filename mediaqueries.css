@@ -1,0 +1,134 @@
+/* MEDIA QUERIES - ADJUSTED */
+
+/* BREAKPOINT: 1400px and below */
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: fit-content; /* Avoids stretching too tall */
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
+
+/* BREAKPOINT: 1200px and below (Tablet/Small Laptop) */
+@media screen and (max-width: 1200px) {
+  /* Navigation */
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+
+  /* General Section Layout */
+  #profile,
+  .section-container {
+    display: block; 
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+    padding-top: 4rem; 
+  }
+  section {
+    margin: 0 5%;
+  }
+
+  /* Profile Image */
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem; 
+  }
+  
+  /* Experience Section Adjustments */
+  #experience,
+  .experience-details-container {
+    margin-top: 1rem; /* Reduced margin */
+  }
+
+  /* About Section */
+  .about-containers {
+    margin-top: 2rem; 
+  }
+}
+
+/* BREAKPOINT: 600px and below (Mobile) */
+@media screen and (max-width: 600px) {
+  /* Section Sizing */
+  #profile {
+    height: fit-content; /* Flexible height */
+    margin-bottom: 2rem; 
+  }
+  #contact,
+  footer {
+    height: fit-content; /* Flexible height */
+    padding-bottom: 2rem;
+  }
+  footer nav {
+    margin-bottom: 1rem; 
+  }
+
+  /* General Text & Titles */
+  .title {
+    font-size: 2rem;
+  }
+  .section__text__p2 {
+    font-size: 1.1rem; 
+  }
+  .experience-sub-title {
+    font-size: 1.15rem; 
+  }
+  .logo {
+    font-size: 1.25rem; 
+  }
+  .text-container {
+    text-align: left; 
+  }
+
+  /* Container & Layout adjustments */
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0.5rem 0; 
+  }
+  
+  /* Navigation & Links */
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Profile Image on Mobile */
+  .section__pic-container {
+    width: 80%; 
+    height: auto; 
+    aspect-ratio: 1 / 1; 
+    max-width: 200px; 
+    margin: 0 auto 1.5rem;
+  }
+
+  /* Experience Articles (Skills) */
+  article {
+    width: 45%; /* Two items per row */
+    justify-content: flex-start; 
+    gap: 0.25rem; 
+    font-size: 0.9rem; 
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 0.9rem;
+  }
+}
