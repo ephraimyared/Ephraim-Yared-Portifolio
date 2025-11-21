@@ -268,32 +268,10 @@ section {
 }
 
 .about-containers {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
-@media (max-width: 900px) {
-  #about .section-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  section {
-    margin: 0 2rem;
-  }
-
-  .about-details-container {
-    max-width: 90%;
-  }
-
-  .section__pic-container img {
-    width: 250px;
-  }
-}
-
 
 .about-details-container {
   justify-content: center;
@@ -329,6 +307,7 @@ section {
   gap: 4rem;
   height: 80%;
 }
+
 @media screen and (max-width: 600px) {
   .section__pic-container {
     width: 80%;             /* take up most of the screen width */
@@ -348,7 +327,6 @@ section {
     object-fit: cover;
   }
 }
-
 
 /* EXPERIENCE SECTION - UPDATED FOR SPACING */
 
