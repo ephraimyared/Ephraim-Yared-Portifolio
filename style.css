@@ -267,32 +267,39 @@ section {
   position: relative;
 }
 
+/* Main layout */
 .about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
-.about-details-container {
+  display: flex;
+  align-items: center;        /* FIX: aligns image + cards + text */
   justify-content: center;
-  flex-direction: column;
+  gap: 2.5rem;
+  margin: 2rem 0;
 }
 
-.about-containers,
+/* Text + cards column */
 .about-details-container {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* FIX: prevents text from dropping too low */
+  max-width: 600px;            /* keeps text clean */
 }
 
+/* Image */
 .about-pic {
   border-radius: 2rem;
+  width: 350px;
+  height: auto;
+  object-fit: cover;
 }
 
+/* Arrow */
 .arrow {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
 }
 
+/* Cards */
 .details-container {
   padding: 1.5rem;
   flex: 1;
@@ -303,18 +310,38 @@ section {
   text-align: center;
 }
 
+/* FIX: Remove height limit that breaks desktop layout */
 .section-container {
   gap: 4rem;
-  height: 80%;
+  height: auto;               /* FIX: stops squeezing the section */
 }
 
+/* MOBILE FIX */
 @media screen and (max-width: 600px) {
+
+  .about-containers {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-details-container {
+    align-items: center;
+  }
+  .about-details-container p {
+  text-align: justify;
+}
+
+
+  .about-pic {
+    width: 250px;
+  }
+
   .section__pic-container {
-    width: 80%;             /* take up most of the screen width */
-    max-width: 200px;       /* don’t exceed 200px */
-    height: auto;           /* keep proportions */
-    aspect-ratio: 1 / 1;    /* keep square shape */
-    margin: 0 auto 1.5rem;  /* center and add space below */
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -323,10 +350,11 @@ section {
   .section__pic-container img {
     width: 100%;
     height: auto;
-    border-radius: 50%;     /* optional if you want it circular */
+    border-radius: 50%;
     object-fit: cover;
   }
 }
+
 
 /* EXPERIENCE SECTION - UPDATED FOR SPACING */
 
