@@ -268,10 +268,32 @@ section {
 }
 
 .about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
 }
+@media (max-width: 900px) {
+  #about .section-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  section {
+    margin: 0 2rem;
+  }
+
+  .about-details-container {
+    max-width: 90%;
+  }
+
+  .section__pic-container img {
+    width: 250px;
+  }
+}
+
 
 .about-details-container {
   justify-content: center;
